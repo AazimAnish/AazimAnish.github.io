@@ -9,7 +9,7 @@ export const App: VFC = () => {
 		<div className={styles.container}>
 			<TCanvas />
 			<BasicButtons />
-			<LinkIconButton imagePath="/assets/icons/github.svg" linkPath="https://github.com/nemutas/r3f-monopo-london" />
+			<LinkIconButton imagePath="/assets/icons/github.svg" linkPath="https://github.com/AazimAnish" />
 		</div>
 	)
 }
