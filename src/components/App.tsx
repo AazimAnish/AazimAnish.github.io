@@ -2,13 +2,15 @@ import React, { VFC } from 'react';
 import { css } from '@emotion/css';
 import { LinkIconButton } from './LinkIconButton';
 import { TCanvas } from './three/TCanvas';
-import BasicButtons from './three/button';
+import IconButtonColors from './Button';
+
+
 
 export const App: VFC = () => {
 	return (
 		<div className={styles.container}>
 			<TCanvas />
-			<BasicButtons />
+			<IconButtonColors position='center'/>
 			<LinkIconButton imagePath="/assets/icons/github.svg" linkPath="https://github.com/AazimAnish" />
 		</div>
 	)

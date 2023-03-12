@@ -5,7 +5,7 @@ export class Drawer {
 	public aspect
 
 	private _ctx
-	private readonly _margin = 130
+	private readonly _margin = 70
 
 	constructor(private _text1: string, private _text2: string) {
 		const canvas = document.createElement('canvas')
@@ -32,8 +32,8 @@ export class Drawer {
 
 		const text2Metrics = ctx.measureText(this._text2)
 
-		ctx.fillText(this._text1, this._margin, this._margin)
-		ctx.fillText(this._text2, width - text2Metrics.width - this._margin, height - (fontSize + this._margin))
+		ctx.fillText(this._text1, width - 900, height - 400)
+		ctx.fillText(this._text2, width - 850, height - 275)
 
 		// ctx.lineWidth = 3
 		// ctx.strokeStyle = '#f00'
