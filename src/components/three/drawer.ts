@@ -5,7 +5,8 @@ export class Drawer {
 	public aspect
 
 	private _ctx
-	private readonly _margin = 70
+	private readonly _margin = 130
+
 
 	constructor(private _text1: string, private _text2: string) {
 		const canvas = document.createElement('canvas')

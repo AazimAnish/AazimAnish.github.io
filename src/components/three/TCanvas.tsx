@@ -18,7 +18,7 @@ export const TCanvas: VFC = () => {
 				<Background />
 				<Lense />
 				<TextPlane
-					text={['Hi there! ,', 'I am Aazim Anish']}
+					text={['Hi there!,', 'I am Aazim Anish']}
 					vertexShader={enVertexShader}
 					fragmentShader={enFragmentShader}
 				/>

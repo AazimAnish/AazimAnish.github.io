@@ -1,25 +1,14 @@
-import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import Button from '@mui/material-next/Button';
-
+import React, { useState } from 'react';
 
 type IconButtonColorsProps = {
-  /**
-   * The color of the icon button.
-   * @default 'secondary'
-   */
-  color?: 'primary' | 'secondary' | 'tertiary';
   /**
    * The position of the icon button.
    * @default 'bottom-right'
    */
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' | 'center';
-  variant?: 'outline' | 'text' | 'filled' | 'filledTonal' | 'elevated';
-  size?: 'small' | 'medium' | 'large';
 };
 
-const IconButtonColors: React.FC<IconButtonColorsProps> = ({ color = 'secondary', position = 'center', variant = 'outline' }) => {
+const IconButtonColors: React.FC<IconButtonColorsProps> = ({ position = 'center'}) => {
   let positionStyle;
   switch (position) {
     case 'top-left':
@@ -38,12 +27,32 @@ const IconButtonColors: React.FC<IconButtonColorsProps> = ({ color = 'secondary'
       positionStyle = styles.bottomRight;
   }
 
+  const [hover, setHover] = useState(false);
+
   return (
-    <Stack direction="row" spacing={1} sx={positionStyle}>
-      <IconButton aria-label="fingerprint" color="primary">
-      <Button sx={{ fontFamily: 'Poppins', fontWeight: 'bold' }} variant="outlined">Click Me</Button>
-      </IconButton>
-    </Stack>
+    <div style={{...positionStyle, display: 'inline-block', overflow: 'hidden', width: '87px', height: '50px'}}>
+      <button 
+        className="glass-button"
+        style={{
+          fontFamily: 'Poppins', 
+          fontWeight: 1000, 
+          borderRadius: '20px', 
+          border: 'none', 
+          padding: '10px 25px', 
+          color: 'rgba(255,255,255,0.8)', 
+          backgroundColor: hover ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.1)',
+          boxShadow: hover ? '0 3px 10px rgba(0, 0, 0, 0.3)' : '0 2px 5px rgba(0, 0, 0, 0.2)',
+          transition: 'all 0.3s',
+          cursor: 'pointer',
+          textTransform: 'uppercase',
+          transform: hover ? 'translateY(2px)' : 'none'
+        }}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        More
+      </button>
+    </div>
   );
 };
 
@@ -84,10 +93,9 @@ const styles: Styles = {
   },
   center: {
     ...temp.container,
-    left: '50%',
-    top: '50p%',
-    bottom: '30%',
-  }
+    right: '725px',
+    top: '475px',
+  },
 };
 
 export default IconButtonColors;

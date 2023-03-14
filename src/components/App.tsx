@@ -2,7 +2,7 @@ import React, { VFC } from 'react';
 import { css } from '@emotion/css';
 import { LinkIconButton } from './LinkIconButton';
 import { TCanvas } from './three/TCanvas';
-import IconButtonColors from './Button';
+import IconButtoncolors from './Button';
 
 
 
@@ -10,7 +10,7 @@ export const App: VFC = () => {
 	return (
 		<div className={styles.container}>
 			<TCanvas />
-			<IconButtonColors position='center'/>
+			<IconButtoncolors position='center'/>
 			<LinkIconButton imagePath="/assets/icons/github.svg" linkPath="https://github.com/AazimAnish" />
 		</div>
 	)
