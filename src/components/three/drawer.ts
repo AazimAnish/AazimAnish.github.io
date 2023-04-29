@@ -9,8 +9,8 @@ export class Drawer {
 
 	constructor(private _text1: string, private _text2: string) {
 		const canvas = document.createElement('canvas')
-		canvas.width = 1024
-		canvas.height = canvas.width / 2.2
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
 		this._ctx = canvas.getContext('2d')!
 		this.aspect = canvas.width / canvas.height
 		this.texture = new THREE.CanvasTexture(canvas)
@@ -30,13 +30,7 @@ export class Drawer {
 		ctx.font = `bold ${fontSize}px 'Poppins'`
 		ctx.fillStyle = '#fff'
 
-		const text2Metrics = ctx.measureText(this._text2)
-
 		ctx.fillText(this._text1, width - 900, height - 400)
 		ctx.fillText(this._text2, width - 850, height - 275)
-
-		// ctx.lineWidth = 3
-		// ctx.strokeStyle = '#f00'
-		// ctx.strokeRect(0, 0, width, height)
 	}
 }
