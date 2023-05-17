@@ -1,13 +1,13 @@
 // import React from 'react';
 import { css } from '@emotion/css';
-import LandingPage from './landingPage/landingPage';
+import Home from './homePage/homePage';
 // import { Route, BrowserRouter, Routes } from "react-router-dom";
 // import Home from './mainPage/homePage';
 
 const App = () => {
 	return (
 		<div className={styles.container}>
-			<LandingPage />
+			<Home />
 		</div>
 	)
 }
@@ -15,8 +15,8 @@ const App = () => {
 const styles = {
 	container: css`
 		position: relative;
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 	`
 }
 
