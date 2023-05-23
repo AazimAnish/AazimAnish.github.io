@@ -44,3 +44,16 @@ p{
     position: fixed;
     top: 525px;
 }
+
+.const {
+    color: #4D5BCE;
+}
+
+.github {
+    color: #43D9AD;
+}
+
+a{
+    color: #E99287;
+}
+

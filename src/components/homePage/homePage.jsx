@@ -12,9 +12,12 @@ const Home = () => {
         <h2>&gt; Tech Enthusiast</h2>
         </div>
         <div className='commenttext'>
-        <p className='line1'>// welcome to my portfolio, press z</p>
-        <p className='line2'>// you can also see my projects on my Github page</p>
-        <p className='line3'>const githubLink = "<a href="https://github.com/AazimAnish">https://github.com/AazimAnish</a>"</p>
+        <p>// welcome to my portfolio, press z</p>
+        <p>// you can also see my projects on my Github page</p>
+        <p><span className='const'>const</span> <span className='github'>githubLink</span> = "<a href="https://github.com/AazimAnish">https://github.com/AazimAnish</a>"</p>
+        </div>
+        <div className='backgimg'>
+          <img src="./public/assets/images/floatland.png"></img>
         </div>
     </div>
 
