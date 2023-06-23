@@ -1,6 +1,7 @@
 // import React from 'react';
 import { css } from '@emotion/css';
 import Home from './homePage/homePage';
+import About from './aboutPage/aboutPage';
 // import { Route, BrowserRouter, Routes } from "react-router-dom";
 // import Home from './mainPage/homePage';
 
@@ -8,6 +9,7 @@ const App = () => {
 	return (
 		<div className={styles.container}>
 			<Home />
+			<About />
 		</div>
 	)
 }
